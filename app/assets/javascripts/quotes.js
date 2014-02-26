@@ -26,9 +26,13 @@ $(document).ready(function(){
 		$.getJSON("http://google.com/finance/info?infotype=infoquoteall&q=" + symbol + "&callback=?"
 		).done(function(response){
 			success(response[0]);
-		}).fail(function () {
+			$("#message").text(symbol);
+		})
+		
+		if ($("#message").text() === "fetching..."){
 			$("#message").text("invalid symbol");
-		});
+		} 
+			
 	}
 
 	// load default
