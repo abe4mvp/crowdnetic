@@ -12,14 +12,6 @@ $(document).ready(function(){
 
 
 	var success = function(response) {
-		console.log(response)
-			// error handling here
-			// if (error condition) {
-				//
-				//return
-			//} else {
-				//$("#message").val(response[name]);
-			//}
 
 		$.each(fields, function(key, value) {
 			
@@ -47,7 +39,7 @@ $(document).ready(function(){
 
 	$("#submit").click(function() {
 		event.preventDefault();
-		$("#message").val("fetching...")
+		$("#message").text("fetching...")
 
 		var symbol = $("#q").val();
 
